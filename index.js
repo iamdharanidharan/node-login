@@ -2,7 +2,7 @@ const mongodb = require("mongodb");
 const mongoClient = mongodb.MongoClient;
 const objectId = mongodb.ObjectID;
 require("dotenv").config;
-
+app.use(express.json());
 const express = require("express");
 const app = express();
 
