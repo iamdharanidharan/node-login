@@ -14,7 +14,7 @@ app.get('/',(req, res)=>{
 })
 app.post('/createuser',(req,res)=>{
     try{
-        let client = await mongoClient.connect(dbUrl);
+        let client = await mongoClient.connect(dbURL);
         let db=client.db("MyFirst");
         console.log(req.body)
         const newUser={
