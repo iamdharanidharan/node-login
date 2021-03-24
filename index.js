@@ -12,7 +12,7 @@ const dbURL = process.env.DB_URL;
 app.get('/',(req, res)=>{
     res.send("Hi there..");
 })
-app.post('/createuser',(req,res)=>{
+app.post('/createuser',async (req,res)=>{
     try{
         let client = await mongoClient.connect(dbURL);
         let db=client.db("MyFirst");
